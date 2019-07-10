@@ -23,6 +23,8 @@ let itemsArray = localStorage.getItem('items') ? JSON.parse(localStorage.getItem
 localStorage.setItem('items', JSON.stringify(itemsArray))
 const data = JSON.parse(localStorage.getItem('items'))
 
+// Helper function to check if list is empty
+// And toggle the visiblity of paragraph
 const checkList = () => {
    if (todoList.children.length > 1) {
       emptyListEle.classList.add('todos__empty--hide');
@@ -31,6 +33,7 @@ const checkList = () => {
    }
 }
 
+// Helper function to set local storage
 const setLocalStorage = () => {
    localStorage.setItem('items', JSON.stringify(itemsArray))
 }
@@ -46,6 +49,7 @@ const checkUrgency = (urg) => {
    }
 }
 
+// Create a todo function
 const createATodo = (txt, clr) => {
    // Elements
    const todoContainer = document.createElement('li');
@@ -62,6 +66,7 @@ const createATodo = (txt, clr) => {
    todoBtnsContainer.classList.add('todos__item-inner');
    todoBtnDelete.classList.add('todos__option');
    todoBtnDelete.classList.add('todos__option--delete');
+
    // Appending
    todoBtnsContainer.appendChild(todoBtnDelete);
    todoContainer.appendChild(todoText);
@@ -101,7 +106,7 @@ todoList.addEventListener('click', (e) => {
 });
 
 data.forEach(item => {
-   createATodo(item.txt, item.urg, item.ticked);
+   createATodo(item.txt, item.urg);
 })
 
 checkList();

@@ -9,4 +9,225 @@ html,
 body {
   height: 100%;
 }
+
+body {
+  background: #f0f0f0;
+  font-family: "DM sans", sans-serif;
+}
+
+.utility--pos-center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card {
+  -webkit-box-shadow: 1px 1px 10px rgba(17, 17, 17, 0.185);
+          box-shadow: 1px 1px 10px rgba(17, 17, 17, 0.185);
+  background: #fff;
+  height: 40em;
+  overflow: hidden;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  width: 25em;
+}
+
+.card::-webkit-scrollbar {
+  background: transparent;
+  width: 0;
+}
+
+.card__header {
+  -webkit-animation: bgAnim 30s infinite;
+          animation: bgAnim 30s infinite;
+  background-image: url("../img/header.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 13.33333em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card__title, .card__time {
+  margin: 0;
+}
+
+.card__title {
+  color: #111;
+  font-weight: 300;
+  font-size: 1.75rem;
+  letter-spacing: .025em;
+  text-transform: uppercase;
+}
+
+.card__time {
+  color: #111;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+.card__form {
+  padding: 1em;
+}
+
+.todo-form {
+  background: #fff;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-gap: .25em;
+  padding: 1em;
+  padding-bottom: 0;
+}
+
+.todo-form__input {
+  border: 1px solid rgba(0, 0, 0, 0.233);
+  border-radius: .25em;
+  color: #444;
+  font-size: .90rem;
+  outline: none;
+  padding: .65em .75em;
+}
+
+.todo-form__input:required {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.todo-form__input-text {
+  grid-column: 1/-1;
+}
+
+.todo-form__input-text::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+.todo-form__input-text:-ms-input-placeholder {
+  opacity: 1;
+}
+
+.todo-form__input-text::-ms-input-placeholder {
+  opacity: 1;
+}
+
+.todo-form__input-text::placeholder {
+  opacity: 1;
+}
+
+.todo-form__input-urgency {
+  padding: .5em .75em;
+  margin-top: .5em;
+}
+
+.todo-form__submit {
+  cursor: pointer;
+  margin-top: .5em;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.todo-form__submit:hover {
+  background: #ddd;
+}
+
+.todos {
+  padding: 0 1em;
+}
+
+.todos__empty {
+  color: #666;
+  font-weight: 300;
+  margin-top: 2em;
+  text-align: center;
+}
+
+.todos__empty--hide {
+  display: none;
+}
+
+.todos__list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.todos__item {
+  margin: .5em 0;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.233);
+  border-left: 4px solid red;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.todos__item > p {
+  color: #222;
+  font-size: .90rem;
+  font-weight: 300;
+  padding-left: 1em;
+}
+
+.todos__item--urgency-high {
+  border-left-color: #fe441c;
+}
+
+.todos__item--urgency-med {
+  border-left-color: #fe9e1c;
+}
+
+.todos__item--urgency-low {
+  border-left-color: #4ca8ff;
+}
+
+.todos__item-inner {
+  padding: 0 1em;
+}
+
+.todos__option {
+  all: unset;
+  cursor: pointer;
+  color: #aaa;
+  margin: 0 .5em;
+}
+
+.todos__option::after {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  -webkit-transition: color 300ms ease;
+  transition: color 300ms ease;
+}
+
+.todos__option--delete::after {
+  content: '\f2ed';
+}
+
+.todos__option:hover::after {
+  color: #444;
+}
 /*# sourceMappingURL=styles.css.map */

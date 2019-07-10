@@ -6,3 +6,6 @@ A todo application made with HTML/SCSS/Javascript. Fully responsive with design 
 Desktop view             |  Mobile view
 :-------------------------:|:-------------------------:
 ![](IMG_Desktop_view.png)  |  ![](IMG_Mobile_View.png)
+
+### Future considerations
+In the future I would like the make this application or different todo application that allows for CRUD, as currently it only offers Create, Read and Delete.

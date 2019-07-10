@@ -1,7 +1,7 @@
 # Todo application
 
 ### Aims
-I set out to make a Todo application that allowed a user to add and delete their daily todos from a list, I also considered making it a CRUD application. In addition to this, I had also aimed for the design to look clean and not to overload the user with too many options. Finally, I intended for the todos to be persistent in the browser, made possible with the local storage API.
+I set out to make a Todo application that allowed a user to add and delete their daily todos from a list, I also considered making it a CRUD application. In addition to this, I had also aimed for the design to look clean and not to overload the user with too many options. Finally, I intended for the todos to be persistent in the browser, with the intention to use the local storage API to achieve this.
 
 ---
 ### Visual outcome

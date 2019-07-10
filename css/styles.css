@@ -13,6 +13,7 @@ body {
 body {
   background: #f0f0f0;
   font-family: "DM sans", sans-serif;
+  overflow: hidden;
 }
 
 .utility--pos-center {
@@ -26,6 +27,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: .5em;
 }
 
 .card {
@@ -229,5 +231,17 @@ body {
 
 .todos__option:hover::after {
   color: #444;
+}
+
+@media (max-width: 30em) {
+  .todo-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
